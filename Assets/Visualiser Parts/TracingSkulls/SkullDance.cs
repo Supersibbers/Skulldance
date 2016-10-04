@@ -3,9 +3,9 @@ using System.Collections;
 
 public class SkullDance : MonoBehaviour {
 
-	public int detail = 500; //TODO refactor all this stuff about audiolistening onto a script on the main camera, with a view to making packagedate * amplitude a public variable (or a static?)
-	public float amplitude = 0.1f;
-	public float lerpRate = 0.5f;
+	public int detail = 500; //TODO refactor all this stuff about audiolistening onto a script on the main camera, with a view to making packagedata * amplitude a public variable (or a static?)
+	public float amplitude = 0.2f;
+	public float lerpRate = 0.1f;
 
 	private Vector3 startPosition;
 	private Vector3 startScale;
