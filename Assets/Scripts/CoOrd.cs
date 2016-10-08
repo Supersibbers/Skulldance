@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
 
 public struct CoOrd {
 	public float x;
 	public float z;
 
-	CoOrd (float a, float b){
+	public CoOrd (float a, float b){
 		x = a;
 		z = b;
 	}
@@ -22,12 +24,12 @@ public struct CoOrd {
 		return new CoOrd (x, z);
 	}
 
-	public static CoOrd[] RegularPolygonVertexArray(int n) { //should also contain ALTERNATE OVERLOADS for offset and those zoomy x and y things
-		CoOrd[] coordinates = new CoOrd[n];
+	public static List<CoOrd> RegularPolygonVertexArray(int n) { //should also contain ALTERNATE OVERLOADS for offset and those zoomy x and y things
+		List<CoOrd> coordinates = new List<CoOrd>(n);
 		for (int i = 0; i < n; i++) {
 			CoOrd current = new CoOrd();
 			current = current.RegularPolygonVertex(i,n);
-			coordinates [i] = current;
+			coordinates.Add(current);
 		}
 		return coordinates;
 	}
